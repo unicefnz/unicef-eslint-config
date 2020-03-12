@@ -1,67 +1,16 @@
-# UNICEF NZ Code Style Guide
-This guide is implemented using eslint rules. It's developed with a react + typescript app,
-but will support any combination (or neither) of the two
+# UNICEF NZ Javascript Style Guide
 
-## Installing
-Depending on the type of code you'll be writing, you must install some extra peer dependencies
+Check out [Installing](/doc/installing.md) for instructions installing the ESLint plugin
 
-Start with installing the ESLint config:
-`npm install --save-dev @unicefnz/eslint-config`
+## Style Choices
+This guide extends [Airbnb's JS style](https://github.com/airbnb/javascript) with a few
+opinionated tweaks to make your life easier.
 
-### Vanilla JS
-Vanilla JS doesn't need any plugins!
+- comma-dangle is disabled
+- react/jsx-filename-extension is disabled
+- prefer-template is disabled
+- arrow-parens has been loosened so simple expressions don't require parentheses
+- max-len has been bumped up to 140 characters. You could put a tweet on every line!
 
-Example config:
-```js
-module.exports = {
-  extends: '@unicefnz'
-}
-```
-
-### React
-React requires the full airbnb config as well as a few plugins.
-`npm install --save-dev eslint-plugin-jsx-a11y \
-                        eslint-plugin-import \
-                        eslint-plugin-react \
-                        eslint-plugin-react-hooks`
-
-Example config:
-```js
-module.exports = {
-  extends: '@unicefnz/eslint-config/react'
-}
-```
-
-### Typescript
-Typescript requires a couple of extra peer deps 
-```
-npm install --save-dev @typescript-eslint/eslint-plugin eslint-plugin-import
-```
-
-Example config:
-```js
-module.exports = {
-  extends: [
-    '@unicefnz/eslint-config/typescript'
-  ],
-  parserOptions: {
-    project: './tsconfig.json'
-  }
-}
-
-```
-
-### React + Typescript
-Peer deps from React + Typescript, and extend *both* their configs
-Example config:
-```js
-module.exports = {
-  extends: [
-    '@unicefnz/eslint-config/react',
-    '@unicefnz/eslint-config/typescript'
-  ],
-  parserOptions: {
-    project: './tsconfig.json'
-  }
-}
-```
+## Contributing
+Have a look at [Contributing](/doc/contributing.md)
