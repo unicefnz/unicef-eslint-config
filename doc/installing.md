@@ -8,6 +8,9 @@ Install ESLint and the config
 npm install --save-dev eslint @unicefnz/eslint-config
 ```
 
+> npm may warn you about "Unmet peer dependencies," you can ignore this warning once
+> you've followed the steps below
+
 Choose your mode:
 - [Vanilla JS](#vanilla-js)
 - [React](#react)

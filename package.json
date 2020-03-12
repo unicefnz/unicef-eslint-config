@@ -2,7 +2,7 @@
   "name": "@unicefnz/eslint-config",
   "version": "1.0.0",
   "description": "UNICEF NZ Javascript & Typescript code style guidelines",
-  "main": "base.js",
+  "main": "index.js",
   "keywords": [
     "eslint",
     "eslintconfig"
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/unicef-new-zealand/unicef-eslint-plugin.git"
+    "url": "git+https://github.com/unicef-new-zealand/unicef-eslint-config.git"
   },
-  "author": "",
+  "author": "Asher Foster <asher@unicef.org.nz>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/unicef-new-zealand/unicef-eslint-plugin/issues"
+    "url": "https://github.com/unicef-new-zealand/unicef-eslint-config/issues"
   },
-  "homepage": "https://github.com/unicef-new-zealand/unicef-eslint-plugin#readme",
+  "homepage": "https://github.com/unicef-new-zealand/unicef-eslint-config#readme",
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.23.0",
     "eslint": "^6.1.0",
