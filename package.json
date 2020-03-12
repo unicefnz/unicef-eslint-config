@@ -1,0 +1,45 @@
+{
+  "name": "@unicefnz/eslint-config",
+  "version": "1.0.0",
+  "description": "UNICEF NZ Javascript & Typescript code style guidelines",
+  "main": "base.js",
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unicef-new-zealand/unicef-eslint-plugin.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unicef-new-zealand/unicef-eslint-plugin/issues"
+  },
+  "homepage": "https://github.com/unicef-new-zealand/unicef-eslint-plugin#readme",
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "eslint": "^6.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^1.7.0"
+  },
+  "dependencies": {
+    "@typescript-eslint/parser": "^2.23.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-typescript": "^7.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "eslint": "^6.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "typescript": "^3.8.3"
+  }
+}
