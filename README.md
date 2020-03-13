@@ -7,10 +7,17 @@ This guide extends [Airbnb's JS style](https://github.com/airbnb/javascript) wit
 opinionated tweaks to make your life easier.
 
 - comma-dangle is disabled
-- react/jsx-filename-extension is disabled
 - prefer-template is disabled
 - arrow-parens has been loosened so simple expressions don't require parentheses
 - max-len has been bumped up to 140 characters. You could put a tweet on every line!
+
+**React**
+- react/jsx-filename-extension is disabled
+- react/jsx-props-no-spreading is disabled, sometimes this is required
+- jsx-a11y/anchor-is-valid has removed href requirement, to support Next
+
+**Typescript**
+- spaced-comment modified to allow /// comments
 
 ## Contributing
 Have a look at [Contributing](/doc/contributing.md)

@@ -4,7 +4,6 @@
 module.exports = {
   rules: {
     'comma-dangle': 0,
-    'react/jsx-filename-extension': 0,
     'prefer-template': 0,
     'arrow-parens': [2, 'as-needed', { requireForBlockBody: true }],
     'max-len': ['error', 140, 2, {
