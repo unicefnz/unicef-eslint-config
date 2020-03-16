@@ -60,14 +60,15 @@ module.exports = {
 ```
 
 ## React + Typescript
-Install the dependencies mentioned in both sections, and then extend both of their configs
+Install the dependencies mentioned in both sections, and then extend ts-react.
+This behaves differently than extending them both individually, as we have some react
+specific typescript rules.
 
 Example config:
 ```js
 module.exports = {
   extends: [
-    '@unicefnz/eslint-config/react',
-    '@unicefnz/eslint-config/typescript'
+    '@unicefnz/eslint-config/ts-react',
   ],
   parserOptions: {
     project: './tsconfig.json'

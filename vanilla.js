@@ -1,6 +1,8 @@
 module.exports = {
   extends: [
     'airbnb-base',
-    './base',
-  ]
+  ],
+  rules: {
+    ...require('./rules/base')
+  }
 };

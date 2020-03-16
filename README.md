@@ -14,6 +14,8 @@ opinionated tweaks to make your life easier.
 **React**
 - react/jsx-filename-extension is disabled
 - react/jsx-props-no-spreading is disabled, sometimes this is required
+- react/require-default-props is disabled, sometimes undefined is fine
+- react/jsx-one-expression-per-line is disabled. Makes "Hello {name}" invalid, come on.
 - jsx-a11y/anchor-is-valid has removed href requirement, to support Next
 
 **Typescript**
