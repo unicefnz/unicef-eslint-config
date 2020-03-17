@@ -7,5 +7,6 @@ module.exports = {
     components: ['Link'],
     specialLink: ['to'],
     aspects: ['invalidHref', 'preferButton'] // We remove the href tag here because Next.js often requires anchors without href
-  }]
+  }],
+  'jsx-a11y/accessible-emoji': 0
 };

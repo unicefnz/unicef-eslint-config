@@ -8,5 +8,7 @@ module.exports = {
     ignoreRegExpLiterals: true,
     ignoreStrings: true,
     ignoreTemplateLiterals: true,
-  }]
+  }],
+  'import/no-extraneous-dependencies': 0,
+  'import/no-unresolved': 0
 };
