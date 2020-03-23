@@ -23,6 +23,7 @@ opinionated tweaks to make your life easier.
 - jsx-a11y/accessible-emoji is disabled, because come on, no one can be bothered
 
 **Typescript**
+- consistent-return disabled, this should be enforced by the typescript compiler
 - spaced-comment modified to allow /// comments
 
 ## Contributing
