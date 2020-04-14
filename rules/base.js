@@ -1,7 +1,8 @@
 module.exports = {
-  'comma-dangle': 0,
-  'prefer-template': 0,
   'arrow-parens': [2, 'as-needed', { requireForBlockBody: true }],
+  'comma-dangle': 0,
+  'import/no-extraneous-dependencies': 0,
+  'import/no-unresolved': 0,
   'max-len': ['error', 140, 2, {
     ignoreUrls: true,
     ignoreComments: false,
@@ -9,6 +10,6 @@ module.exports = {
     ignoreStrings: true,
     ignoreTemplateLiterals: true,
   }],
-  'import/no-extraneous-dependencies': 0,
-  'import/no-unresolved': 0
+  'no-plusplus': 0,
+  'prefer-template': 0
 };
