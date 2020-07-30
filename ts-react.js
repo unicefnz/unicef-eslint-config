@@ -6,6 +6,11 @@ module.exports = {
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:import/typescript'
   ],
+  settings: {
+    react: {
+      version: 'detect'
+    }
+  },
   rules: {
     ...require('./rules/base'),
     ...require('./rules/typescript'),
