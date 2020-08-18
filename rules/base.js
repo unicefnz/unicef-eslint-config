@@ -3,7 +3,7 @@ module.exports = {
   'arrow-parens': [2, 'as-needed', { requireForBlockBody: true }],
 
   // Style preference
-  'comma-dangle': 0,
+  'comma-dangle': ['error', 'never'],
 
   'import/no-extraneous-dependencies': 0,
   'import/no-unresolved': 0,
