@@ -1,77 +1,61 @@
-# Installing the ESLint plugin
-These style choices have been implemented in an eslint plugin.
-The plugins this guide uses varies depending on the type of code you're writing,
-so you may need to install some extra peer dependencies.
+# Installation
+We use a little eslint hack to make it easy to get setup and running. Start
+with installing eslint, typescript and the config:
 
-Install ESLint and the config
-```
-npm install --save-dev eslint @unicefnz/eslint-config
+```shell script
+npm install --save-dev eslint typescript @unicefnz/eslint-config
 ```
 
-> npm may warn you about "Unmet peer dependencies," you can ignore this warning once
-> you've followed the steps below
+> ### Watch out
+> Although this config will lint JS code just fine, it references typescript and
+> therefore depends on it. Make sure to install it yourself!
 
-Choose your mode:
-- [Vanilla JS](#vanilla-js)
-- [React](#react)
-- [Typescript](#typescript)
-- [React + Typescript](#react--typescript)
 
-## Vanilla JS
-This config works out of the box with Vanilla JS, just add the config to your extends:
+Next, setup your .eslintrc.js with something like this:
 ```js
-module.exports = {
-  extends: '@unicefnz'
-}
-```
+// This is a workaround for https://github.com/eslint/eslint/issues/3458
+require('@rushstack/eslint-patch/modern-module-resolution');
 
-## React
-React requires a few plugins to properly parse JSX
-```
-npm install --save-dev eslint-plugin-jsx-a11y \
-                       eslint-plugin-import \
-                       eslint-plugin-react \
-                       eslint-plugin-react-hooks
-```
-
-Example config:
-```js
-module.exports = {
-  extends: '@unicefnz/eslint-config/react'
-}
-```
-
-## Typescript
-Typescript requires a couple of extra plugins, and a little bit more configuration
-```
-npm install --save-dev @typescript-eslint/eslint-plugin eslint-plugin-import
-```
-
-Example config:
-```js
 module.exports = {
   extends: [
-    '@unicefnz/eslint-config/typescript'
+    '@unicefnz'
   ],
-  parserOptions: {
-    project: './tsconfig.json'
-  }
+  parserOptions: { tsconfigRootDir: __dirname }
 }
 ```
 
-## React + Typescript
-Install the dependencies mentioned in both sections, and then extend ts-react.
-This behaves differently than extending them both individually, as we have some react
-specific typescript rules.
 
+## With React
+Using react? Cool, so are we! All you need to do is extend another file:
 Example config:
 ```js
+// This is a workaround for https://github.com/eslint/eslint/issues/3458
+require('@rushstack/eslint-patch/modern-module-resolution');
+
 module.exports = {
   extends: [
-    '@unicefnz/eslint-config/ts-react',
+    '@unicefnz',
+    '@unicefnz/eslint-config/react'
   ],
-  parserOptions: {
-    project: './tsconfig.json'
-  }
+  parserOptions: { tsconfigRootDir: __dirname }
+}
+```
+
+## Without Typescript
+This config **should** work fine with plain JS (this repo is vanilla, too!) but
+it's not designed specifically for it. If you're not using typescript, you can
+drop the `parserOptions.tsconfigRootDir` from your project.
+
+Make sure to read the [js gotcha](#watch-out).
+
+```js
+// This is a workaround for https://github.com/eslint/eslint/issues/3458
+require('@rushstack/eslint-patch/modern-module-resolution');
+
+module.exports = {
+  extends: [
+    '@unicefnz',
+    '@unicefnz/eslint-config/react'
+  ]
 }
 ```

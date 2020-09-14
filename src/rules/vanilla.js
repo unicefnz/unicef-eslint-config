@@ -14,7 +14,7 @@ module.exports = {
     ignoreComments: false,
     ignoreRegExpLiterals: true,
     ignoreStrings: true,
-    ignoreTemplateLiterals: true,
+    ignoreTemplateLiterals: true
   }],
 
   // Modifying a prop's props should definitely be allowed, this causes wayyyy to many errors
@@ -33,13 +33,13 @@ module.exports = {
   'spaced-comment': ['error', 'always', {
     line: {
       exceptions: ['-', '+'],
-      markers: ['=', '!', '/'], // space here to support sprockets directives
+      markers: ['=', '!', '/'] // space here to support sprockets directives
     },
     block: {
       exceptions: ['-', '+'],
       // Support @__PURE__ comments, used by webpack tooling
       markers: ['=', '!', ':', '::', '@__PURE__'], // space here to support sprockets directives and flow comment types
-      balanced: true,
+      balanced: true
     }
   }]
 };
