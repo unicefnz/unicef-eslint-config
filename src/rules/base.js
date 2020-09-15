@@ -6,7 +6,9 @@ module.exports = {
   'comma-dangle': ['error', 'never'],
 
   'import/no-extraneous-dependencies': 0,
-  'import/no-unresolved': 0,
+
+  // This should be the author's choice
+  'import/prefer-default-export': 0,
 
   // You could fit a tweet in this!
   'max-len': ['error', 140, 2, {

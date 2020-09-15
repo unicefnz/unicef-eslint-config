@@ -1,4 +1,5 @@
 module.exports = {
-  // This should be handled by the compiler, not linter
-  'consistent-return': 0
+  // These should be handled by the compiler, not linter
+  'consistent-return': 0,
+  'import/no-unresolved': 0
 };

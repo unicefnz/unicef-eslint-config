@@ -2,21 +2,15 @@ module.exports = {
   plugins: ['eslint-plugin-react'],
   extends: [
     'airbnb',
-    'airbnb/hooks'
+    'airbnb/hooks',
+    require.resolve('./base') // Base needs to be loaded after airbnb to properly configure typescript
   ],
-  rules: require('./rules/react'),
+  rules: {
+    ...require('./rules/react')
+  },
   settings: {
     react: {
       version: 'detect'
     }
-  },
-  overrides: [
-    {
-      // Typescript & react
-      files: ['*.tsx'],
-      extends: [
-        'airbnb-typescript'
-      ]
-    }
-  ]
+  }
 };

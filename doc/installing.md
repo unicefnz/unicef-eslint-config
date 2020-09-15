@@ -14,7 +14,7 @@ npm install --save-dev eslint typescript @unicefnz/eslint-config
 Next, setup your .eslintrc.js with something like this:
 ```js
 // This is a workaround for https://github.com/eslint/eslint/issues/3458
-require('@rushstack/eslint-patch/modern-module-resolution');
+require('@unicefnz/eslint-config/patch');
 
 module.exports = {
   extends: [
@@ -26,15 +26,17 @@ module.exports = {
 
 
 ## With React
-Using react? Cool, so are we! All you need to do is extend another file:
+Using react? Cool, so are we! All you need to do is extend a different file:
+
+> **Do not** extend both configs, **only** use the react one
+
 Example config:
 ```js
 // This is a workaround for https://github.com/eslint/eslint/issues/3458
-require('@rushstack/eslint-patch/modern-module-resolution');
+require('@unicefnz/eslint-config/patch');
 
 module.exports = {
   extends: [
-    '@unicefnz',
     '@unicefnz/eslint-config/react'
   ],
   parserOptions: { tsconfigRootDir: __dirname }
@@ -50,12 +52,11 @@ Make sure to read the [js gotcha](#watch-out).
 
 ```js
 // This is a workaround for https://github.com/eslint/eslint/issues/3458
-require('@rushstack/eslint-patch/modern-module-resolution');
+require('@unicefnz/eslint-config/patch');
 
 module.exports = {
   extends: [
-    '@unicefnz',
-    '@unicefnz/eslint-config/react'
+    '@unicefnz'
   ]
 }
 ```

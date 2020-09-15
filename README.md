@@ -1,6 +1,23 @@
 # UNICEF NZ Javascript Style Guide
 
-Check out [Installing](/doc/installing.md) for instructions installing the ESLint plugin
+## Installing
+Check out [Installing](/doc/installing.md) for detailed instructions installing the ESLint plugin
+```shell script
+npm install --save-dev eslint typescript @unicefnz/eslint-config
+```
+
+```js
+// .eslintrc.js
+// This is a workaround for https://github.com/eslint/eslint/issues/3458
+require('@unicefnz/eslint-config/patch');
+
+module.exports = {
+  extends: [
+    '@unicefnz'
+  ],
+  parserOptions: { tsconfigRootDir: __dirname }
+}
+```
 
 ## Style Choices
 This guide extends [Airbnb's JS style](https://github.com/airbnb/javascript) with a few

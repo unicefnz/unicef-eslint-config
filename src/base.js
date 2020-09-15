@@ -1,12 +1,30 @@
 module.exports = {
   parser: '',
+  plugins: [
+    '@typescript-eslint/eslint-plugin'
+  ],
+  rules: require('./rules/base'),
   overrides: [
     {
       files: ['*.js'],
       extends: [
         'airbnb-base'
       ],
-      rules: require('./rules/vanilla')
+      rules: require('./rules/base')
+    },
+    {
+      // Typescript & react
+      files: ['*.tsx'],
+      extends: [
+        'airbnb-typescript'
+      ]
+    },
+    {
+      // Non react typescript
+      files: ['*.ts'],
+      extends: [
+        'airbnb-typescript/base' // Only use base config on non-JSX
+      ]
     },
     {
       // Declare an override that applies to TypeScript files only
@@ -28,17 +46,10 @@ module.exports = {
 
         sourceType: 'module'
       },
-      plugins: [
-        '@typescript-eslint'
-      ],
-      rules: require('./rules/typescript')
-    },
-    {
-      // Non react typescript
-      files: ['*.ts'],
-      extends: [
-        'airbnb-typescript/base' // Only use base config on non-JSX
-      ]
+      rules: {
+        ...require('./rules/base'),
+        ...require('./rules/typescript')
+      }
     }
   ]
 };
