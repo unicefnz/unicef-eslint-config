@@ -39,8 +39,8 @@ module.exports = {
     },
     block: {
       exceptions: ['-', '+'],
-      // Support @__PURE__ comments, used by webpack tooling
-      markers: ['=', '!', ':', '::', '@__PURE__'], // space here to support sprockets directives and flow comment types
+      // Support #__PURE__ comments, used by webpack tooling
+      markers: ['=', '!', ':', '::', '#__PURE__'], // space here to support sprockets directives and flow comment types
       balanced: true
     }
   }]
