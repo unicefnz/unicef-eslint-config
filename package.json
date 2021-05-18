@@ -1,6 +1,6 @@
 {
   "name": "@unicefnz/eslint-config",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "UNICEF NZ Javascript & Typescript code style guidelines",
   "main": "index.js",
   "keywords": [
